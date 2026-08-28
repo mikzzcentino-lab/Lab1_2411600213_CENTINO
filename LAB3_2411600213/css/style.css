@@ -1,0 +1,271 @@
+/* ========================================
+   STUDENT PORTAL - CUSTOM CSS
+   Theme: Blue Student Portal
+   ======================================== */
+
+/*
+Primary Blue	#0d6efd	    Navbar, buttons, headings
+Dark Blue	    #0a58ca	    Gradient/hover
+Background	    #f4f7fb	    Dashboard background
+Text	        #212529	    Main text
+Accent Yellow	#ffc107	    Highlights
+White	        #ffffff	    Cards/sidebar
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+/* ---------- General Page ---------- */
+
+body {
+    background-color: #f4f7fb;
+    color: #212529;
+    font-family: Arial, sans-serif;
+}
+
+
+/* ---------- Login Page ---------- */
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+/* Login Header */
+
+.login-header {
+    background: linear-gradient(135deg, #0d6efd, #0a58ca);
+    color: white;
+    padding: 30px 20px;
+    border: none;
+}
+
+
+/* Logo */
+
+.login-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+
+/* Login Form */
+
+.login-card .form-control {
+    border-radius: 8px;
+    padding: 12px;
+}
+
+
+.login-card .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+
+/* Login Button */
+
+.login-card .btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: bold;
+}
+
+
+.login-card .btn-primary:hover {
+    background-color: #0a58ca;
+    border-color: #0a58ca;
+}
+
+
+/* Login Footer */
+
+.login-card .card-footer {
+    background-color: #f8f9fa;
+    border-top: none;
+    padding: 15px;
+}
+
+
+/* ---------- Navigation Bar ---------- */
+
+.custom-navbar {
+    background: linear-gradient(135deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+}
+
+
+.custom-navbar .navbar-brand {
+    font-size: 20px;
+}
+
+
+.custom-navbar .nav-link {
+    color: white;
+}
+
+
+.custom-navbar .nav-link:hover {
+    color: #ffc107;
+}
+
+
+/* ---------- Sidebar ---------- */
+
+.sidebar {
+    background-color: white;
+    min-height: calc(100vh - 64px);
+    border-right: 1px solid #dee2e6;
+}
+
+
+.sidebar-title {
+    color: #0d6efd;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.sidebar .nav-link {
+    color: #212529;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+
+.sidebar .nav-link:hover {
+    background-color: #e7f1ff;
+    color: #0d6efd;
+}
+
+
+.sidebar .nav-link.active {
+    background-color: #0d6efd;
+    color: white;
+}
+
+
+/* ---------- Dashboard Main Content ---------- */
+
+main {
+    background-color: #f4f7fb;
+    min-height: calc(100vh - 64px);
+}
+
+
+/* Greeting */
+
+#greeting {
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+
+/* ---------- Statistic Cards ---------- */
+
+.stat-card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.stat-card .card-body {
+    padding: 20px;
+}
+
+
+.stat-card h6 {
+    color: #6c757d;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+
+.stat-card h2 {
+    color: #0d6efd;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+/* ---------- Activity Table ---------- */
+
+.card {
+    border-radius: 12px;
+    border: none;
+}
+
+
+.card-header {
+    background-color: white;
+    border-bottom: 1px solid #dee2e6;
+    padding: 18px;
+}
+
+
+.card-header h5 {
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+
+.table th {
+    color: #495057;
+    font-weight: bold;
+}
+
+
+.table td {
+    vertical-align: middle;
+}
+
+
+/* ---------- Responsive Design ---------- */
+
+@media (max-width: 767px) {
+
+    .sidebar {
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    main {
+        min-height: auto;
+    }
+
+    .login-card {
+        max-width: 95%;
+    }
+
+    .custom-navbar {
+        padding: 10px 15px;
+    }
+
+}
