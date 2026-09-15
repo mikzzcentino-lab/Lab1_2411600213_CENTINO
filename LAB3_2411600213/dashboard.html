@@ -33,6 +33,7 @@
             <div class="collapse navbar-collapse" id="navbarContent">
 
                 <ul class="navbar-nav ms-auto">
+
                     <li class="nav-item">
                         <span class="nav-link" id="navUsername">
                             Student
@@ -40,10 +41,13 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="logoutButton">
+                        <a class="nav-link"
+                           href="#"
+                           id="logoutButton">
                             Logout
                         </a>
                     </li>
+
                 </ul>
 
             </div>
@@ -53,6 +57,7 @@
 
     <!-- Main Layout -->
     <div class="container-fluid">
+
         <div class="row">
 
             <!-- Sidebar -->
@@ -233,15 +238,206 @@
                 </section>
 
 
+                <!-- Inventory Management -->
+                <section class="mb-4">
+
+                    <div class="card shadow-sm">
+
+                        <div class="card-header">
+
+                            <h5 class="mb-0">
+                                Inventory Management
+                            </h5>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <!-- Low Stock Alert -->
+                            <div id="lowStockAlert"
+                                 class="alert alert-warning">
+                                ⚠️ Low stock items detected!
+                            </div>
+
+
+                            <!-- Search and Filters -->
+                            <div class="row g-3 mb-4">
+
+                                <!-- Search -->
+                                <div class="col-md-4">
+
+                                    <label for="searchInput"
+                                           class="form-label">
+                                        Search Product
+                                    </label>
+
+                                    <input type="text"
+                                           id="searchInput"
+                                           class="form-control"
+                                           placeholder="Search by product name or SKU">
+
+                                </div>
+
+
+                                <!-- Category -->
+                                <div class="col-md-3">
+
+                                    <label for="categoryFilter"
+                                           class="form-label">
+                                        Category
+                                    </label>
+
+                                    <select id="categoryFilter"
+                                            class="form-select">
+
+                                        <option value="all">
+                                            All Categories
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- Stock Status -->
+                                <div class="col-md-3">
+
+                                    <label for="stockFilter"
+                                           class="form-label">
+                                        Stock Status
+                                    </label>
+
+                                    <select id="stockFilter"
+                                            class="form-select">
+
+                                        <option value="all">
+                                            All Status
+                                        </option>
+
+                                        <option value="in stock">
+                                            In Stock
+                                        </option>
+
+                                        <option value="low stock">
+                                            Low Stock
+                                        </option>
+
+                                        <option value="out of stock">
+                                            Out of Stock
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- Export -->
+                                <div class="col-md-2 d-flex align-items-end">
+
+                                    <button id="exportCSVButton" class="btn btn-primary">
+                                        Export CSV
+                                    </button>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Inventory Table -->
+                            <div class="table-responsive">
+
+                                <table class="table table-hover align-middle">
+
+                                    <thead>
+
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>SKU</th>
+                                            <th>Category</th>
+                                            <th>Quantity</th>
+                                            <th>Unit Price</th>
+                                            <th>Status</th>
+                                        </tr>
+
+                                    </thead>
+
+                                    <tbody id="inventoryTable">
+
+                                        <!-- JavaScript will add products here -->
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                            <!-- Inventory Charts -->
+            <section class="mb-4">
+
+                <div class="row g-4">
+
+                    <!-- Stock Quantity Chart -->
+                    <div class="col-lg-8">
+
+                        <div class="card shadow-sm h-100">
+
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    Stock Quantity by Product
+                                </h5>
+                            </div>
+
+                            <div class="card-body">
+
+                                <canvas id="stockChart"></canvas>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Category Chart -->
+                    <div class="col-lg-4">
+
+                        <div class="card shadow-sm h-100">
+
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    Products by Category
+                                </h5>
+                            </div>
+
+                            <div class="card-body">
+
+                                <canvas id="categoryChart"></canvas>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>    
                 <!-- Recent Activity -->
                 <section>
 
                     <div class="card shadow-sm">
 
                         <div class="card-header">
+
                             <h5 class="mb-0">
                                 Recent Activity
                             </h5>
+
                         </div>
 
                         <div class="card-body">
@@ -251,12 +447,14 @@
                                 <table class="table table-hover align-middle">
 
                                     <thead>
+
                                         <tr>
                                             <th>Date</th>
                                             <th>Activity</th>
                                             <th>Course</th>
                                             <th>Status</th>
                                         </tr>
+
                                     </thead>
 
                                     <tbody id="activityTable">
@@ -278,12 +476,18 @@
             </main>
 
         </div>
+
     </div>
 
 
     <!-- Bootstrap 5 JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+
+    <!-- Data Manager -->
+    <script src="js/dataManager.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>    
     <!-- Dashboard JavaScript -->
     <script src="js/dashboard.js"></script>
 
